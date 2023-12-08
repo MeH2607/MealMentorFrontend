@@ -7,7 +7,7 @@ if (window.location.hostname === 'localhost' || window.location.hostname === "12
   API_URL = "http://localhost:8080/api"
 } else{
   //Add URL to your hosted API, once you have it deployed.
-  API_URL = "mealmentormohamed.azurewebsites.net"
+  API_URL = "mealmentormohamed.azurewebsites.net/api"
 }
 
 
