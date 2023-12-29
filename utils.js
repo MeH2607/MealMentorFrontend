@@ -67,6 +67,7 @@ export async function handleHttpErrors(res) {
  return res.json()
 }
 
+//addToken bestemmer om der kræves en token når man skal fortage en request.
 export function makeOptions(method, body, addToken) {
   const opts = {
     method: method,

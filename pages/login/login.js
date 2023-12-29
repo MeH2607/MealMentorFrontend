@@ -124,6 +124,8 @@ export async function initLogin() {
     toggleUiBasedOnRoles();
   }
 }
+
+//Fjerner token ved at tømme local storage
 export function logout() {
   localStorage.removeItem("token");
   localStorage.removeItem("user");
@@ -132,6 +134,7 @@ export function logout() {
   toggleUiBasedOnRoles();
 }
 
+//Håndterer hvilke knapper man kan se i navbaren når man er logget ind.
 export function toggleUiBasedOnRoles() {
   const loginContainer = document.getElementById("login-container");
   const logoutContainer = document.getElementById("logout-container");
@@ -149,7 +152,8 @@ export function toggleUiBasedOnRoles() {
   loginContainer.style.display = "none";
   mealplanContainer.style.display = "none";
   
-
+  
+//Hvad skal man kunne se når man er logget ind
   if (isUserLoggedIn()) {
 
     console.log("user is logged in: " + isUserLoggedIn(), " from inside if")
